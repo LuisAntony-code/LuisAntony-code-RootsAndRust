@@ -1,0 +1,62 @@
+# ===== Unity: carpetas generadas (NUNCA subir) =====
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Bundles y cachés de assets
+/[Aa]ssets/[Aa]ssetStoreTools*
+/[Aa]ssets/[Ss]treamingAssets/aa*
+*.bundle
+
+# ===== IDEs =====
+.vs/
+.vscode/
+.idea/
+.gradle/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+ExportedObj/
+.consulo/
+
+# Metadatos de símbolos / crash reports
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+sysinfo.txt
+crashlytics-build.properties
+
+# Builds de plataformas
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Herramientas de multi-instancia (ParrelSync / Multiplayer Play Mode)
+*_clone_*/
+/[Ll]ibrary/VP/
+
+# ===== Sistema operativo =====
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
