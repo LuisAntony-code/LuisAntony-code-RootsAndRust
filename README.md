@@ -26,7 +26,7 @@ git lfs install
 ```
 
 ```bash
-git clone https://github.com/<tu-usuario>/RootsAndRust.git
+git clone https://github.com/LuisAntony-code/LuisAntony-code-RootsAndRust.git
 ```
 
 ### 2. Abrir en Unity
