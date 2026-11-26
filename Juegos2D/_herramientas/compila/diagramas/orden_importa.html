@@ -1,0 +1,12 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../comun/diagramas/estilo.css"><style>
+.f{display:flex;gap:30px}.col{background:#0d1117;border-radius:12px;padding:16px 20px;width:400px;color:#e6edf3;font-family:'DejaVu Sans Mono',monospace;font-size:16px;line-height:1.9}
+.c{color:#7ee787}.t{font-family:'DejaVu Sans';font-weight:bold;font-size:17px;margin-bottom:6px}.r{font-family:'DejaVu Sans';font-size:22px;font-weight:bold;margin-top:6px}
+</style></head><body><div id="captura">
+<h1>La idea central del juego: el orden importa</h1>
+<p class="sub">Las mismas cartas, en distinto orden, dan resultados muy distintos. Igual que las instrucciones de un programa real.</p>
+<div class="f">
+ <div class="col"><div class="t" style="color:#ff8fab">Orden A: primero multiplicar</div>let x = 0;<br>x *= 3; <span class="c">// x = 0</span><br>x += 7; <span class="c">// x = 7</span><br>x = x * x; <span class="c">// x = 49</span><div class="r" style="color:#ff8fab">Resultado: 49</div></div>
+ <div class="col"><div class="t" style="color:#7ee787">Orden B: primero sumar</div>let x = 0;<br>x += 7; <span class="c">// x = 7</span><br>x *= 3; <span class="c">// x = 21</span><br>x = x * x; <span class="c">// x = 441</span><div class="r" style="color:#7ee787">Resultado: 441 (¡9 veces más!)</div></div>
+</div>
+<p class="nota"><b>Estrategia:</b> sumar al principio (para tener algo que multiplicar), multiplicar después y dejar el cuadrado para el final. Los bucles y las librerías cambian esta regla… y descubrir cómo es lo divertido. Esto entrena justo lo que más cuesta al empezar a programar: <b>seguir el flujo de ejecución</b> y el <b>valor de las variables</b> línea a línea (la "prueba de escritorio").</p>
+</div></body></html>

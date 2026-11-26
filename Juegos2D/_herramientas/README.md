@@ -16,4 +16,5 @@ Regenerar todo (requiere Python 3 con Pygments y Pillow, Node con Playwright y p
 cd Juegos2D/_herramientas
 python3 generar.py ecocaza
 python3 generar.py barrendero
+python3 generar.py compila
 ```

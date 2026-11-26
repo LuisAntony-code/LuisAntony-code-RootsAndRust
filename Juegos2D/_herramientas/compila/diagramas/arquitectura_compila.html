@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../comun/diagramas/estilo.css"><style>
+.cols{display:flex;gap:18px}.col{width:300px}
+.t{font-weight:bold;font-size:16px;padding:8px 12px;border-radius:10px 10px 0 0;color:#fff}
+.lst{border:2px solid;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px;font-family:'DejaVu Sans Mono',monospace;font-size:13px;line-height:1.7;background:#fff}
+.lst span{color:#6b7b72;font-family:'DejaVu Sans';font-size:12px}
+.raiz{margin:0 auto 16px;text-align:center;font-family:'DejaVu Sans Mono',monospace;font-size:15px;background:#14112b;color:#c77dff;border-radius:10px;padding:10px;width:600px}
+</style></head><body><div id="captura">
+<h1>Mapa del código de ¡Compila!</h1>
+<p class="sub">Las funciones agrupadas por su tarea.</p>
+<div class="raiz">requestAnimationFrame(bucle) ⟳ bucle → actualizar(dt) + dibujar()</div>
+<div class="cols">
+ <div class="col"><div class="t" style="background:#2e86de">Cartas y mazo</div><div class="lst" style="border-color:#2e86de">crearMazo() → agregarCartas()<br>barajar(lista) <span>Fisher-Yates</span><br>robarCartas() / tamanoMano()<br>posicionCarta(i)<br>dibujarCarta() / dibujarMano()<br>codigoCarta / textoCarta /<br>&nbsp;descripcionCarta</div>
+ <div class="t" style="background:#9d4edd;margin-top:12px">Elegir y ejecutar</div><div class="lst" style="border-color:#9d4edd">alternarCarta(i) / limiteCartas()<br>ejecutar()<br>&nbsp;└ interpretar(cartas)<br>&nbsp;&nbsp;&nbsp;├ aplicarCarta(c, x)<br>&nbsp;&nbsp;&nbsp;└ limitar(x) <span>overflow</span><br>actualizarEjecucion(dt)<br>terminarEjecucion()<br>&nbsp;└ quitarSeleccionadas()<br>descartar()</div></div>
+ <div class="col"><div class="t" style="background:#e39c00">Exámenes y progreso</div><div class="lst" style="border-color:#e39c00">iniciarExamen()<br>comprobarExamen()<br>&nbsp;├ aprobarExamen() → abrirTienda()<br>&nbsp;└ desaprobar() → terminarPartida()<br>nombreExamen() / jefeActivo(id)<br>abrirTienda() / comprar()<br>clicTienda(p) / salirTienda()<br>tieneLibreria(id)<br>empezarPartida()<br>leerRecord() / guardarRecord()</div>
+ <div class="t" style="background:#27ae60;margin-top:12px">Controles</div><div class="lst" style="border-color:#27ae60">pointerdown → manejarClic(p)<br>&nbsp;├ dentro(p, rectángulo)<br>&nbsp;└ cartaEnPunto(p)<br>pointermove → cartaBajoRaton<br>keydown: 1-8, ENTER, D, ESPACIO</div></div>
+ <div class="col"><div class="t" style="background:#e84393">Dibujo y efectos</div><div class="lst" style="border-color:#e84393">dibujarFondo()<br>dibujarLibrerias()<br>dibujarPanel()<br>dibujarEditor()<br>&nbsp;└ lineasPrograma()<br>dibujarBotones()<br>dibujarMensaje()<br>dibujarTienda()<br>&nbsp;└ escribirParrafo()<br>dibujarMenu / Fin / Graduacion<br>celebrarResultado(valor)<br>&nbsp;├ explosion() <span>partículas</span><br>&nbsp;└ crearTextoFlotante()<br>sonido(…) <span>Web Audio</span><br>formatear(n) / escribir(…)</div></div>
+</div></div></body></html>

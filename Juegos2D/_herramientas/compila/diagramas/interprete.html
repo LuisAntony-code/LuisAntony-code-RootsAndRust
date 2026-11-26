@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../comun/diagramas/estilo.css"><style>
+.f{display:flex;align-items:center;gap:14px}.b{border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.5;width:240px}
+.b b{display:block;font-size:15px;margin-bottom:4px}.m{font-family:'DejaVu Sans Mono',monospace;font-size:12.5px}
+.ar{font-size:30px;color:#7a8a80}
+</style></head><body><div id="captura">
+<h1>Cómo funciona el intérprete</h1>
+<p class="sub">Primero se calcula TODO de golpe (interpretar) y luego se enseña paso a paso (animación). Así la animación es sencilla.</p>
+<div class="f">
+ <div class="b" style="background:#e3f0ff;border:2px solid #2e86de"><b>1. Cartas elegidas</b><span class="m">[ +7, ↻2, ×2 ]</span><br>(en el orden de selección)</div><div class="ar">➜</div>
+ <div class="b" style="background:#fff1d6;border:2px solid #e39c00"><b>2. interpretar(cartas)</b>recorre las cartas, calcula x con <span class="m">aplicarCarta()</span> y apunta cada paso</div><div class="ar">➜</div>
+ <div class="b" style="background:#dff5e3;border:2px solid #27ae60"><b>3. Lista de pasos</b><span class="m">{linea:0, x:0}<br>{linea:1, x:7}<br>{linea:2, "2 veces"}<br>{linea:3, x:14}<br>{linea:3, x:28}</span></div>
+</div>
+<div class="f" style="margin-top:18px">
+ <div class="b" style="background:#fde4ec;border:2px solid #e84393;width:560px"><b>4. actualizarEjecucion(dt)</b>cada ~0,4 s muestra el siguiente paso: resalta la línea, escribe el comentario <span class="m">// x = 14</span> y actualiza el número grande. Cada paso va un poco más rápido que el anterior.</div><div class="ar">➜</div>
+ <div class="b" style="background:#f0e6ff;border:2px solid #9d4edd"><b>5. terminarEjecucion()</b>suma el resultado al puntaje, quita las cartas usadas y roba nuevas</div>
+</div>
+<p class="nota">Los <b>intérpretes</b> reales (como el de JavaScript o Python) también leen las instrucciones una a una, en orden, y van cambiando el valor de las variables.</p>
+</div></body></html>

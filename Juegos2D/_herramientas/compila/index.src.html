@@ -1,0 +1,69 @@
+<!--> **La "partida de nacimiento" de la página.** Estas primeras líneas le dicen al navegador qué tipo de documento es y en qué idioma está. -->
+<!--? Declara que este archivo es una página web moderna (HTML5). Siempre va en la primera línea. -->
+<!DOCTYPE html>
+<!--? Abre el documento HTML e indica que el idioma es español (lang="es"). Ayuda a los lectores de pantalla y a los traductores. -->
+<html lang="es">
+<!--? Abre la cabecera: aquí va información SOBRE la página (título, estilos...), no lo que se ve dentro de ella. -->
+<head>
+  <!--? Usa la codificación UTF-8 para que se vean bien las tildes, la ñ y los signos ¡ ¿. -->
+  <meta charset="UTF-8">
+  <!--? Hace que en móviles la página use el ancho real de la pantalla en lugar de verse diminuta. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--? El texto que aparece en la pestaña del navegador. -->
+  <title>¡Compila! - El roguelike de cartas donde tu mano es un programa</title>
+  <!--> **Los estilos (CSS).** Entre `<style>` y `</style>` decimos cómo se ve la página: colores, centrado y tamaño del lienzo. -->
+  <!--? Abre el bloque de estilos CSS. -->
+  <style>
+    <!--? Empieza las reglas para el cuerpo (body) de la página: todo lo que se ve. -->
+    body {
+      <!--? Quita el margen blanco que los navegadores ponen por defecto alrededor de la página. -->
+      margin: 0;
+      <!--? Hace que el cuerpo mida como mínimo el 100 % del alto de la ventana (vh = "viewport height"). -->
+      min-height: 100vh;
+      <!--? Activa "flexbox", un sistema para colocar elementos fácilmente. -->
+      display: flex;
+      <!--? Coloca los elementos uno debajo de otro (en columna): primero el lienzo y debajo el texto de ayuda. -->
+      flex-direction: column;
+      <!--? Centra los elementos horizontalmente. -->
+      align-items: center;
+      <!--? Centra los elementos verticalmente. -->
+      justify-content: center;
+      <!--? Color de fondo de la página: un azul noche muy oscuro, como un editor de código en modo oscuro. -->
+      background: #0b0d1f;
+      <!--? Tipo de letra de la página: Arial (o, si no existe, cualquier letra sin adornos). -->
+      font-family: Arial, sans-serif;
+      <!--? Color del texto: un lila muy claro. -->
+      color: #dcd6ff;
+    }
+    <!--? Empieza las reglas para el lienzo (canvas), que es donde se dibuja el juego. -->
+    canvas {
+      <!--? El lienzo nunca será más ancho que la ventana (así cabe en móviles). -->
+      max-width: 100%;
+      <!--? Ni más alto que la ventana menos 50 píxeles (dejamos sitio para el texto de ayuda). -->
+      max-height: calc(100vh - 50px);
+      <!--? Redondea las esquinas del lienzo 12 píxeles. -->
+      border-radius: 12px;
+      <!--? Añade un resplandor morado alrededor del lienzo. -->
+      box-shadow: 0 0 40px rgba(155, 93, 229, 0.35);
+      <!--? En pantallas táctiles evita que arrastrar el dedo mueva o haga zoom en la página. -->
+      touch-action: none;
+    }
+    <!--? Reglas para los párrafos (p): un poco de margen y letra de 14 píxeles. -->
+    p { margin: 10px; font-size: 14px; text-align: center; }
+  <!--? Cierra el bloque de estilos. -->
+  </style>
+<!--? Cierra la cabecera. -->
+</head>
+<!--> **El contenido visible.** Dentro de `<body>` está lo que se ve: el lienzo, una línea de ayuda y la orden de cargar nuestro código. -->
+<!--? Abre el cuerpo: todo lo que hay aquí dentro se ve en la página. -->
+<body>
+  <!--? Crea el lienzo de dibujo. id="lienzo" es su nombre para encontrarlo desde JavaScript. Mide 800 × 600 píxeles. -->
+  <canvas id="lienzo" width="800" height="600"></canvas>
+  <!--? Un párrafo con la ayuda de los controles, debajo del lienzo. -->
+  <p>Elige cartas con el ratón, el dedo o las teclas 1-8 · Ejecutar: ENTER · Descartar: D</p>
+  <!--? Carga y ejecuta nuestro archivo juego.js. Va al final para que el lienzo ya exista cuando el código lo busque. -->
+  <script src="juego.js"></script>
+<!--? Cierra el cuerpo. -->
+</body>
+<!--? Cierra el documento HTML. -->
+</html>

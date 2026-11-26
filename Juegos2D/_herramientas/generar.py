@@ -55,6 +55,11 @@ PATRONES = [
     (r'^ctx\.arc\((.+)\);$', 'Traza un círculo o arco: centro x, centro y, radio, ángulo inicial y ángulo final → `{0}`.'),
     (r'^ctx\.moveTo\((.+)\);$', 'Coloca el lápiz, sin pintar, en el punto `({0})`.'),
     (r'^ctx\.lineTo\((.+)\);$', 'Traza una línea recta hasta el punto `({0})`.'),
+    (r'^ctx\.font = (.+);$', 'Elige la letra (estilo, tamaño en píxeles y tipo): `{0}`.'),
+    (r'^ctx\.textAlign = (.+);$', 'Alineación horizontal del texto respecto al punto que demos: `{0}`.'),
+    (r'^ctx\.textBaseline = (.+);$', 'Alineación vertical del texto: con `{0}` la y que demos será el centro del texto.'),
+    (r'^ctx\.fillText\((.+?), ([^,]+), ([^,]+)\);$', 'Escribe el texto `{0}` en la posición x = `{1}`, y = `{2}`.'),
+    (r'^\} catch \(error\) \{\}?$', 'Si algo dentro del `try` falla, se ejecuta este bloque `catch` («atrapar») en lugar de romperse el juego.'),
     (r'^ctx\.roundRect\((.+)\);$', 'Traza un rectángulo con esquinas redondeadas: x, y, ancho, alto y radio de las esquinas → `{0}`.'),
 ]
 CIERRES = re.compile(r'^[\]\)\}]+[;,]?$')

@@ -1,0 +1,13 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../comun/diagramas/estilo.css"><style>
+.fila{display:flex;gap:8px;align-items:center;margin:8px 0;font-size:14px}.k{width:44px;height:44px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:bold;background:#e9e4ff;border:2px solid #9d4edd}
+.k.i{background:#ffd6e0;border-color:#e84393}.k.j{background:#d6f5e3;border-color:#27ae60}.k.f{background:#ddd;border-color:#999;color:#666}.e{width:280px;color:#4b5d52}
+</style></head><body><div id="captura">
+<h1>Barajar bien: el algoritmo de Fisher-Yates</h1>
+<p class="sub">Desde el final hacia el principio: cambia la carta i por una al azar j entre 0 e i. Las cartas grises ya están colocadas.</p>
+<div class="fila"><span class="e">Inicio</span><div class="k">A</div><div class="k">B</div><div class="k">C</div><div class="k">D</div><div class="k i">E</div></div>
+<div class="fila"><span class="e">i = 4, sale j = 1 → cambia E y B</span><div class="k">A</div><div class="k j">E</div><div class="k">C</div><div class="k">D</div><div class="k f">B</div></div>
+<div class="fila"><span class="e">i = 3, sale j = 3 → se queda</span><div class="k">A</div><div class="k">E</div><div class="k">C</div><div class="k f">D</div><div class="k f">B</div></div>
+<div class="fila"><span class="e">i = 2, sale j = 0 → cambia C y A</span><div class="k j">C</div><div class="k">E</div><div class="k f">A</div><div class="k f">D</div><div class="k f">B</div></div>
+<div class="fila"><span class="e">i = 1, sale j = 0 → cambia E y C</span><div class="k f">E</div><div class="k f">C</div><div class="k f">A</div><div class="k f">D</div><div class="k f">B</div></div>
+<p class="nota">Es un algoritmo clásico (Fisher y Yates, 1938; versión para ordenadores de Durstenfeld, 1964). Es rápido (una sola pasada) y <b>justo</b>: todas las ordenaciones posibles tienen la misma probabilidad. El "truco" de ordenar con <span class="mono">sort(() =&gt; Math.random() - 0.5)</span> que circula por internet NO es justo.</p>
+</div></body></html>
