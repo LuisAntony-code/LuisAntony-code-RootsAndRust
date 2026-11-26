@@ -1,0 +1,8 @@
+body{margin:0;padding:20px;background:#fff;font-family:'DejaVu Sans',Arial,sans-serif;color:#1d2b24}
+#captura{display:inline-block;background:#fbfcfa;border:1px solid #d8e0da;border-radius:14px;padding:26px 30px}
+h1{font-size:24px;margin:0 0 6px;color:#14532d}
+.sub{font-size:15px;color:#4b5d52;margin:0 0 18px}
+.nota{font-size:14px;color:#4b5d52;margin-top:14px;max-width:900px;line-height:1.45}
+code,.mono{font-family:'DejaVu Sans Mono',monospace}
+.ilus{display:inline-block;font-size:12px;background:#fff3cd;color:#7a5b00;border:1px solid #f0d98a;border-radius:6px;padding:3px 8px;margin-bottom:10px}
+svg text{font-family:'DejaVu Sans',Arial,sans-serif}

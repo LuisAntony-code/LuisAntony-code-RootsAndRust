@@ -1,0 +1,5 @@
+# Las imágenes de los informes se guardan como archivos normales de Git (no con Git LFS)
+# para que se vean directamente en GitHub y cualquiera pueda descargarlas sin instalar nada extra.
+*.png -filter -diff -merge binary
+*.pdf binary
+*.docx binary

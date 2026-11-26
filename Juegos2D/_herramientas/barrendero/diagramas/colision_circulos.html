@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../comun/diagramas/estilo.css"></head><body><div id="captura">
+<h1>Choques entre círculos</h1>
+<p class="sub">Imaginamos cada objeto como un círculo invisible. Chocan si la distancia entre centros es menor que la suma de los radios.</p>
+<svg width="900" height="330" viewBox="0 0 900 330">
+ <g transform="translate(0,20)">
+  <circle cx="110" cy="140" r="70" fill="rgba(141,153,174,.35)" stroke="#6c757d" stroke-width="2"/>
+  <circle cx="300" cy="140" r="40" fill="rgba(61,204,199,.3)" stroke="#3dccc7" stroke-width="2"/>
+  <line x1="110" y1="140" x2="300" y2="140" stroke="#333" stroke-width="2"/>
+  <text x="205" y="128" text-anchor="middle" font-size="14">distancia = 190</text>
+  <text x="205" y="250" text-anchor="middle" font-size="15">70 + 40 = 110 &lt; 190</text>
+  <text x="205" y="275" text-anchor="middle" font-size="17" font-weight="bold" fill="#27ae60">NO chocan</text>
+ </g>
+ <g transform="translate(450,20)">
+  <circle cx="110" cy="140" r="70" fill="rgba(141,153,174,.35)" stroke="#6c757d" stroke-width="2"/>
+  <circle cx="200" cy="140" r="40" fill="rgba(230,57,70,.3)" stroke="#e63946" stroke-width="2"/>
+  <line x1="110" y1="140" x2="200" y2="140" stroke="#333" stroke-width="2"/>
+  <text x="155" y="128" text-anchor="middle" font-size="14">90</text>
+  <text x="155" y="250" text-anchor="middle" font-size="15">70 + 40 = 110 &gt; 90</text>
+  <text x="155" y="275" text-anchor="middle" font-size="17" font-weight="bold" fill="#e63946">¡CHOCAN!</text>
+  <text x="300" y="120" font-size="14" font-family="DejaVu Sans Mono">function chocan(a, b) {</text>
+  <text x="300" y="142" font-size="14" font-family="DejaVu Sans Mono">  return distancia(a.x, a.y, b.x, b.y)</text>
+  <text x="300" y="164" font-size="14" font-family="DejaVu Sans Mono">         &lt; a.radio + b.radio;</text>
+  <text x="300" y="186" font-size="14" font-family="DejaVu Sans Mono">}</text>
+ </g>
+</svg>
+<p class="nota">La distancia se calcula con Pitágoras: <span class="mono">Math.hypot(x2 - x1, y2 - y1)</span> = √((x2−x1)² + (y2−y1)²). Esta misma función sirve para láser↔chatarra, nave↔chatarra, nave↔fragmento y chatarra↔satélite.</p>
+</div></body></html>

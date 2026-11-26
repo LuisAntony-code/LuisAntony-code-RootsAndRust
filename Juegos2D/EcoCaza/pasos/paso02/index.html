@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoCaza - Separa la basura, salva el planeta</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #12372a;
+      font-family: Arial, sans-serif;
+      color: #e8f5e9;
+    }
+    canvas {
+      max-width: 100%;
+      max-height: calc(100vh - 50px);
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      touch-action: none;
+    }
+    p { margin: 10px; font-size: 14px; text-align: center; }
+  </style>
+</head>
+<body>
+  <canvas id="lienzo" width="800" height="600"></canvas>
+  <p>Mover: ← → o A D (o el ratón / el dedo) · Cambiar contenedor: teclas 1 2 3 4 o tocando los botones de abajo</p>
+  <script src="juego.js"></script>
+</body>
+</html>

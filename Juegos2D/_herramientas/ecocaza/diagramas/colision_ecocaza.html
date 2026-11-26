@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../comun/diagramas/estilo.css"></head><body><div id="captura">
+<h1>¿Cuándo "entra" un residuo en el contenedor?</h1>
+<p class="sub">La función <span class="mono">tocaContenedor(r)</span> comprueba dos condiciones. Solo si se cumplen <b>las dos</b> (<span class="mono">&amp;&amp;</span>) cuenta como atrapado.</p>
+<svg width="900" height="430" viewBox="0 0 900 430">
+ <defs><marker id="f" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker><marker id="g" markerWidth="10" markerHeight="10" refX="2" refY="5" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#333"/></marker></defs>
+ <rect x="0" y="0" width="900" height="430" fill="#eaf6ff"/>
+ <rect x="0" y="390" width="900" height="40" fill="#6ab04c"/>
+ <rect x="215" y="150" width="190" height="240" fill="rgba(39,174,96,.12)" stroke="#27ae60" stroke-dasharray="7 5" stroke-width="2"/>
+ <text x="310" y="140" text-anchor="middle" font-size="14" fill="#1a7a43" font-weight="bold">zona dentroX</text>
+ <rect x="150" y="250" width="320" height="50" fill="rgba(231,76,60,.14)" stroke="#e74c3c" stroke-dasharray="7 5" stroke-width="2"/>
+ <text x="480" y="268" font-size="14" fill="#c0392b" font-weight="bold">zona dentroY</text>
+ <text x="480" y="288" font-size="13" fill="#c0392b">de la boca hasta 30 px más abajo</text>
+ <path d="M 250 260 L 370 260 L 362 390 L 258 390 Z" fill="#f9c80e" stroke="#b38b00" stroke-width="3"/>
+ <rect x="244" y="250" width="132" height="12" fill="#b38b00"/>
+ <line x1="80" y1="256" x2="244" y2="256" stroke="#333" stroke-dasharray="4 4"/>
+ <text x="20" y="252" font-size="14">boca =</text><text x="20" y="270" font-size="13" class="mono" font-family="DejaVu Sans Mono">y - alto</text>
+ <line x1="310" y1="400" x2="310" y2="410" stroke="#333"/>
+ <text x="310" y="424" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">contenedor.x (centro)</text>
+ <line x1="250" y1="330" x2="370" y2="330" stroke="#333" marker-end="url(#f)" marker-start="url(#g)"/>
+ <text x="310" y="324" text-anchor="middle" font-size="12">ancho</text>
+ <circle cx="330" cy="225" r="26" fill="rgba(120,200,255,.8)" stroke="#2e86de" stroke-width="2"/>
+ <circle cx="330" cy="225" r="4" fill="#333"/>
+ <line x1="330" y1="225" x2="330" y2="251" stroke="#333" stroke-width="2"/>
+ <text x="338" y="244" font-size="12">radio</text>
+ <text x="370" y="210" font-size="13">r.x, r.y</text>
+ <g transform="translate(560,40)" font-size="15">
+  <text y="0" font-weight="bold">Condición 1 (horizontal):</text>
+  <text y="24" font-family="DejaVu Sans Mono" font-size="13">Math.abs(r.x - contenedor.x)</text>
+  <text y="44" font-family="DejaVu Sans Mono" font-size="13">   &lt; contenedor.ancho / 2</text>
+  <text y="68" font-size="13" fill="#4b5d52">"la distancia entre centros es menor</text>
+  <text y="86" font-size="13" fill="#4b5d52">que medio contenedor"</text>
+  <text y="130" font-weight="bold">Condición 2 (vertical):</text>
+  <text y="154" font-family="DejaVu Sans Mono" font-size="13">r.y + r.radio &gt; boca &amp;&amp;</text>
+  <text y="174" font-family="DejaVu Sans Mono" font-size="13">r.y &lt; boca + 30</text>
+  <text y="198" font-size="13" fill="#4b5d52">"su borde de abajo ya pasó la boca,</text>
+  <text y="216" font-size="13" fill="#4b5d52">pero aún no se ha hundido demasiado"</text>
+ </g>
+</svg></div></body></html>

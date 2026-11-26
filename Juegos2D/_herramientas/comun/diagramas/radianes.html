@@ -1,0 +1,29 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="estilo.css"></head><body><div id="captura">
+<h1>Ángulos en el canvas: radianes</h1>
+<p class="sub">JavaScript mide los ángulos en <b>radianes</b>. Una vuelta completa son <span class="mono">Math.PI * 2</span> (≈ 6.28). Como la y crece hacia abajo, los ángulos giran en el sentido del reloj.</p>
+<svg width="820" height="440" viewBox="0 0 820 440">
+ <defs><marker id="f" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e86de"/></marker></defs>
+ <g transform="translate(260,220)">
+  <circle r="160" fill="#eaf6ff" stroke="#2e86de" stroke-width="3"/>
+  <line x1="-190" y1="0" x2="190" y2="0" stroke="#aaa"/><line x1="0" y1="-190" x2="0" y2="190" stroke="#aaa"/>
+  <path d="M 110 0 A 110 110 0 0 1 0 110" fill="none" stroke="#2e86de" stroke-width="4" marker-end="url(#f)"/>
+  <circle cx="160" cy="0" r="7" fill="#c0392b"/><circle cx="0" cy="160" r="7" fill="#c0392b"/><circle cx="-160" cy="0" r="7" fill="#c0392b"/><circle cx="0" cy="-160" r="7" fill="#c0392b"/>
+  <text x="172" y="-10" font-size="16" font-weight="bold">0</text><text x="172" y="12" font-size="13" fill="#555">(0°, derecha)</text>
+  <text x="10" y="190" font-size="16" font-weight="bold">Math.PI / 2</text><text x="10" y="208" font-size="13" fill="#555">(90°, abajo)</text>
+  <text x="-172" y="-10" font-size="16" font-weight="bold" text-anchor="end">Math.PI</text><text x="-172" y="12" font-size="13" fill="#555" text-anchor="end">(180°, izquierda)</text>
+  <text x="10" y="-178" font-size="16" font-weight="bold">-Math.PI / 2</text><text x="10" y="-196" font-size="13" fill="#555">(270° o -90°, arriba)</text>
+  <text x="58" y="60" font-size="14" fill="#2e86de">giro +</text>
+ </g>
+ <g transform="translate(500,60)" font-size="15">
+  <text y="0" font-weight="bold">Fórmulas mágicas</text>
+  <text y="30">Punto a distancia r en el ángulo a:</text>
+  <text y="56" class="mono" font-family="DejaVu Sans Mono">x = centroX + Math.cos(a) * r</text>
+  <text y="80" class="mono" font-family="DejaVu Sans Mono">y = centroY + Math.sin(a) * r</text>
+  <text y="122">Grados → radianes:</text>
+  <text y="148" font-family="DejaVu Sans Mono">radianes = grados * Math.PI / 180</text>
+  <text y="190">Ejemplos:</text>
+  <text y="214" font-family="DejaVu Sans Mono">90°  = Math.PI / 2  ≈ 1.57</text>
+  <text y="238" font-family="DejaVu Sans Mono">180° = Math.PI      ≈ 3.14</text>
+  <text y="262" font-family="DejaVu Sans Mono">360° = Math.PI * 2  ≈ 6.28</text>
+ </g>
+</svg></div></body></html>

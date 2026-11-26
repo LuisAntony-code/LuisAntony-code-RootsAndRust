@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="estilo.css"></head><body><div id="captura">
+<h1>Las coordenadas del lienzo (canvas)</h1>
+<p class="sub">El punto (0, 0) está ARRIBA a la izquierda. La <b>x</b> crece hacia la derecha y la <b>y</b> crece hacia ABAJO (al revés que en matemáticas).</p>
+<svg width="900" height="560" viewBox="0 0 900 560">
+  <defs><marker id="f" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+  <pattern id="r" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0 L0 0 0 40" fill="none" stroke="#d6e4f0" stroke-width="1"/></pattern></defs>
+  <g transform="translate(70,50)">
+    <rect x="0" y="0" width="640" height="480" fill="#eaf6ff" stroke="#2e86de" stroke-width="3"/>
+    <rect x="0" y="0" width="640" height="480" fill="url(#r)"/>
+    <line x1="0" y1="0" x2="700" y2="0" stroke="#c0392b" stroke-width="4" marker-end="url(#f)"/>
+    <line x1="0" y1="0" x2="0" y2="530" stroke="#c0392b" stroke-width="4" marker-end="url(#f)"/>
+    <text x="705" y="8" font-size="22" fill="#c0392b" font-weight="bold">x</text>
+    <text x="-8" y="512" font-size="22" fill="#c0392b" font-weight="bold" text-anchor="end">y</text>
+    <circle cx="0" cy="0" r="8" fill="#c0392b"/>
+    <text x="14" y="26" font-size="17" font-weight="bold">(0, 0)</text>
+    <text x="320" y="-14" font-size="15" text-anchor="middle" fill="#2e86de">ANCHO = 800 píxeles</text>
+    <text x="664" y="240" font-size="15" fill="#2e86de" transform="rotate(90 664 240)" text-anchor="middle">ALTO = 600 píxeles</text>
+    <circle cx="576" cy="112" r="30" fill="#ffd84d" stroke="#b38b00"/>
+    <text x="576" y="168" font-size="15" text-anchor="middle">(720, 140)</text>
+    <line x1="0" y1="112" x2="546" y2="112" stroke="#888" stroke-dasharray="6 5"/>
+    <line x1="576" y1="0" x2="576" y2="82" stroke="#888" stroke-dasharray="6 5"/>
+    <rect x="276" y="384" width="88" height="64" fill="#f9c80e" stroke="#b38b00" stroke-width="2"/>
+    <circle cx="320" cy="448" r="6" fill="#c0392b"/>
+    <text x="378" y="444" font-size="15">(400, 560)</text>
+    <circle cx="640" cy="480" r="8" fill="#2e86de"/>
+    <text x="630" y="470" font-size="16" text-anchor="end" font-weight="bold">(800, 600)</text>
+    <circle cx="320" cy="240" r="6" fill="#14532d"/>
+    <text x="330" y="232" font-size="15">centro: (ANCHO / 2, ALTO / 2) = (400, 300)</text>
+  </g>
+</svg>
+<p class="nota">Ejemplo: para bajar algo 10 píxeles le <b>sumamos</b> 10 a su y. Para subirlo, le restamos. Los ángulos también se miden "al revés": positivo = sentido de las agujas del reloj.</p>
+</div></body></html>

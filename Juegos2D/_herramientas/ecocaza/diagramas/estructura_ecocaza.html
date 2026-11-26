@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../comun/diagramas/estilo.css"><style>
+.grid{display:flex;gap:40px;align-items:flex-start}
+.arbol{font-family:'DejaVu Sans Mono',monospace;font-size:17px;line-height:1.9;background:#fff;border:1px solid #d8e0da;border-radius:10px;padding:16px 22px}
+.dir{color:#b07d00;font-weight:bold}.f1{color:#e44d26;font-weight:bold}.f2{color:#c99a00;font-weight:bold}
+.caja{border-radius:12px;padding:14px 18px;font-size:15px;line-height:1.5;width:330px}
+.html{background:#fdece6;border:2px solid #e44d26}.js{background:#fff8d6;border:2px solid #c99a00}
+.caja code{background:rgba(0,0,0,.06);padding:1px 5px;border-radius:4px}
+.flecha{font-size:15px;color:#4b5d52;text-align:center;margin:8px 0}
+</style></head><body><div id="captura">
+<h1>Los archivos de EcoCaza y cómo se conectan</h1>
+<p class="sub">Solo necesitas una carpeta con dos archivos de texto. Nada que instalar.</p>
+<div class="grid">
+ <div class="arbol"><span class="dir">📁 EcoCaza/</span><br>&nbsp;&nbsp;├── <span class="f1">index.html</span><br>&nbsp;&nbsp;└── <span class="f2">juego.js</span></div>
+ <div>
+  <div class="caja html"><b>index.html</b> — la página web<br>• crea el lienzo: <code>&lt;canvas id="lienzo"&gt;</code><br>• le da estilo (colores, centrado)<br>• carga el código: <code>&lt;script src="juego.js"&gt;</code></div>
+  <div class="flecha">⬇ el navegador lee <code>juego.js</code> al final de la página</div>
+  <div class="caja js"><b>juego.js</b> — el cerebro del juego<br>• busca el lienzo: <code>getElementById("lienzo")</code><br>• guarda los datos (contenedores, residuos…)<br>• dibuja y mueve todo 60 veces por segundo</div>
+ </div>
+</div>
+<p class="nota">Para jugar basta con hacer <b>doble clic en index.html</b>: se abrirá en tu navegador. Cada vez que guardes un cambio en el código, pulsa <b>F5</b> (recargar) en el navegador para verlo.</p>
+</div></body></html>

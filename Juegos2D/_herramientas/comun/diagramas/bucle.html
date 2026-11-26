@@ -1,0 +1,31 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="estilo.css"><style>
+.fila{display:flex;align-items:center;gap:14px}
+.caja{border-radius:14px;padding:14px 16px;width:190px;text-align:center;font-size:15px;line-height:1.35;box-shadow:0 2px 0 rgba(0,0,0,.08)}
+.caja b{display:block;font-size:17px;margin-bottom:4px}
+.a{background:#dff5e3;border:2px solid #27ae60}.b{background:#e3f0ff;border:2px solid #2e86de}.c{background:#fff1d6;border:2px solid #e39c00}.d{background:#fde4ec;border:2px solid #e84393}
+.flecha{font-size:34px;color:#7a8a80}
+.vuelta{margin:10px 0 0 0;border:2px dashed #7a8a80;border-top:none;height:28px;border-radius:0 0 18px 18px;width:880px;position:relative}
+.vuelta span{position:absolute;left:50%;transform:translateX(-50%);bottom:-24px;background:#fbfcfa;padding:0 10px;font-size:14px;color:#4b5d52}
+.peli{display:flex;gap:6px;margin-top:40px;align-items:center}
+.fot{width:96px;height:72px;border:3px solid #333;border-radius:4px;background:#bfe6ff;position:relative;overflow:hidden}
+.fot i{position:absolute;bottom:6px;width:22px;height:16px;background:#f9c80e;border:1px solid #b38b00}
+.fot s{position:absolute;width:10px;height:10px;background:#7f8c8d;left:44px}
+</style></head><body><div id="captura">
+<h1>El bucle del juego (game loop)</h1>
+<p class="sub">Un videojuego repite estos pasos unas 60 veces por segundo, para siempre.</p>
+<div class="fila">
+ <div class="caja a"><b>1. El navegador llama a bucle()</b>gracias a <span class="mono">requestAnimationFrame</span></div><div class="flecha">➜</div>
+ <div class="caja b"><b>2. Calcular dt</b>¿cuántos segundos han pasado desde el fotograma anterior? (≈ 0.016)</div><div class="flecha">➜</div>
+ <div class="caja c"><b>3. actualizar(dt)</b>mover, comprobar choques, sumar puntos…</div><div class="flecha">➜</div>
+ <div class="caja d"><b>4. dibujar()</b>borrar con el fondo y pintar todo en su nueva posición</div>
+</div>
+<div class="vuelta"><span>y vuelta a empezar: <span class="mono">requestAnimationFrame(bucle)</span></span></div>
+<div class="peli">
+ <div class="fot"><s style="top:6px"></s><i style="left:20px"></i></div>
+ <div class="fot"><s style="top:20px"></s><i style="left:30px"></i></div>
+ <div class="fot"><s style="top:34px"></s><i style="left:40px"></i></div>
+ <div class="fot"><s style="top:48px"></s><i style="left:40px"></i></div>
+ <div style="font-size:15px;color:#4b5d52;max-width:420px;margin-left:12px;line-height:1.4">Como en una película o un cuaderno de dibujos animados: cada fotograma es un dibujo ligeramente distinto al anterior. Al verlos seguidos, parece que todo se mueve.</div>
+</div>
+<p class="nota"><b>¿Por qué multiplicar por dt?</b> Si un ordenador dibuja 60 fotogramas por segundo y otro 120, sin dt el segundo iría el doble de rápido. Con <span class="mono">velocidad × dt</span>, todo se mueve los mismos píxeles por segundo en cualquier ordenador.</p>
+</div></body></html>

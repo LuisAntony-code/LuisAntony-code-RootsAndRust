@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../comun/diagramas/estilo.css"><style>
+.cols{display:flex;gap:22px}
+.col{width:300px}
+.t{font-weight:bold;font-size:16px;padding:8px 12px;border-radius:10px 10px 0 0;color:#fff}
+.lst{border:2px solid;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px;font-family:'DejaVu Sans Mono',monospace;font-size:13.5px;line-height:1.75;background:#fff}
+.lst span{color:#6b7b72;font-family:'DejaVu Sans';font-size:12px}
+.raiz{margin:0 auto 18px;text-align:center;font-family:'DejaVu Sans Mono',monospace;font-size:16px;background:#14532d;color:#fff;border-radius:10px;padding:10px;width:560px}
+</style></head><body><div id="captura">
+<h1>Mapa del código de EcoCaza</h1>
+<p class="sub">Qué funciones existen y quién llama a quién. Cada fotograma: <span class="mono">bucle → actualizar → dibujar</span>.</p>
+<div class="raiz">requestAnimationFrame(bucle) &nbsp;⟳&nbsp; bucle(tiempo) → actualizar(dt) + dibujar()</div>
+<div class="cols">
+ <div class="col"><div class="t" style="background:#e39c00">actualizar(dt)</div><div class="lst" style="border-color:#e39c00">
+ actualizarParticulas(dt)<br>actualizarTextos(dt)<br>actualizarContenedor(dt)<br>actualizarResiduos(dt)<br>&nbsp;├ crearResiduo()<br>&nbsp;├ tocaContenedor(r)<br>&nbsp;├ atrapar(r)<br>&nbsp;│ &nbsp;├ crearTextoFlotante()<br>&nbsp;│ &nbsp;├ mostrarConsejo()<br>&nbsp;│ &nbsp;├ crearParticulas()<br>&nbsp;│ &nbsp;└ sonidoAcierto/Error()<br>&nbsp;└ residuoPerdido(r)<br>actualizarDificultad()<br>comprobarFin()<br>&nbsp;└ terminarPartida()</div></div>
+ <div class="col"><div class="t" style="background:#e84393">dibujar()</div><div class="lst" style="border-color:#e84393">
+ dibujarFondo()<br>&nbsp;└ dibujarNube(x, y)<br>dibujarBasuraSuelo()<br>dibujarResiduo(r)<br>&nbsp;└ DIBUJOS[...]()<br>dibujarContenedor()<br>&nbsp;├ dibujarSimboloReciclaje()<br>&nbsp;└ escribir()<br>dibujarParticulas()<br>dibujarTextos()<br>dibujarHUD()<br>&nbsp;└ dibujarCorazon()<br>dibujarSelector()<br>dibujarConsejo()<br>dibujarPantallaMenu() / Fin()</div></div>
+ <div class="col"><div class="t" style="background:#2e86de">Eventos (controles)</div><div class="lst" style="border-color:#2e86de">
+ keydown <span>(pulsar tecla)</span><br>&nbsp;├ teclas[...] = true<br>&nbsp;├ cambiarTipo(tipo)<br>&nbsp;└ empezarPartida()<br>keyup <span>(soltar tecla)</span><br>pointerdown <span>(clic / toque)</span><br>&nbsp;├ posicionEnLienzo()<br>&nbsp;└ cambiarTipo(tipo)<br>pointermove <span>(mover)</span></div>
+ <div class="t" style="background:#27ae60;margin-top:14px">Datos</div><div class="lst" style="border-color:#27ae60">TIPOS, ORDEN_TIPOS<br>RESIDUOS, DIBUJOS<br>DATOS_CURIOSOS<br>contenedor, residuos<br>puntos, vidas, combo…</div></div>
+</div></div></body></html>

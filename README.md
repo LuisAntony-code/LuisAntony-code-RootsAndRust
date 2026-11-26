@@ -212,3 +212,9 @@ git lfs ls-files
 ---
 
 ¡Que gane el bosque! 🌿 …o la madera. 🪚
+
+---
+
+## 🎮 Extra: juegos 2D educativos
+
+La carpeta [`Juegos2D/`](Juegos2D/) contiene dos juegos 2D para navegador (**EcoCaza** y **Barrendero Orbital**) con sus informes paso a paso en Markdown, PDF y Word. Es independiente del proyecto de Unity.

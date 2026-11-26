@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../comun/diagramas/estilo.css"><style>
+.arbol{display:flex;flex-direction:column;align-items:center;gap:8px;background:#0b1020;border-radius:10px;padding:20px 30px;color:#e6edf3}
+.n{display:flex;gap:60px;justify-content:center}.it{text-align:center;font-size:14px}
+.fl{color:#ffd166;font-size:14px}
+</style></head><body><div id="captura">
+<h1>Cómo se rompe la chatarra</h1>
+<p class="sub">Cada disparo divide una pieza en dos más pequeñas. La más pequeña deja un fragmento reciclable.</p>
+<svg width="880" height="420" viewBox="0 0 880 420">
+ <rect width="880" height="420" fill="#0b1020" rx="10"/>
+ <g stroke="#ffd166" stroke-width="2" stroke-dasharray="6 5" fill="none">
+  <path d="M440 95 L250 175"/><path d="M440 95 L630 175"/>
+  <path d="M250 210 L160 290"/><path d="M250 210 L340 290"/><path d="M630 210 L540 290"/><path d="M630 210 L720 290"/>
+  <path d="M160 312 L160 360"/><path d="M340 312 L340 360"/><path d="M540 312 L540 360"/><path d="M720 312 L720 360"/>
+ </g>
+ <polygon points="486,60 470,92 440,104 404,94 392,62 410,30 448,20 478,34" fill="#9c6644" stroke="#2b2d42" stroke-width="2"/>
+ <text x="520" y="55" fill="#e6edf3" font-size="15">Tamaño 3 · radio 46 · 20 puntos</text>
+ <polygon points="272,192 262,212 240,214 228,198 236,178 256,172" fill="#8d99ae" stroke="#2b2d42" stroke-width="2"/>
+ <polygon points="652,192 640,214 620,212 608,196 618,176 640,174" fill="#8d99ae" stroke="#2b2d42" stroke-width="2"/>
+ <text x="440" y="200" fill="#e6edf3" font-size="15" text-anchor="middle">Tamaño 2 · radio 26 · 50 puntos</text>
+ <g fill="#adb5bd" stroke="#2b2d42" stroke-width="2"><polygon points="172,300 165,312 152,310 148,298 156,290 168,290"/><polygon points="352,300 345,312 332,310 328,298 336,290 348,290"/><polygon points="552,300 545,312 532,310 528,298 536,290 548,290"/><polygon points="732,300 725,312 712,310 708,298 716,290 728,290"/></g>
+ <text x="440" y="285" fill="#e6edf3" font-size="15" text-anchor="middle">Tamaño 1 · radio 14 · 100 puntos</text>
+ <g><circle cx="160" cy="378" r="14" fill="rgba(87,255,154,.25)"/><circle cx="160" cy="378" r="6" fill="#57ff9a"/><circle cx="340" cy="378" r="14" fill="rgba(87,255,154,.25)"/><circle cx="340" cy="378" r="6" fill="#57ff9a"/><circle cx="540" cy="378" r="14" fill="rgba(87,255,154,.25)"/><circle cx="540" cy="378" r="6" fill="#57ff9a"/><circle cx="720" cy="378" r="14" fill="rgba(87,255,154,.25)"/><circle cx="720" cy="378" r="6" fill="#57ff9a"/></g>
+ <text x="440" y="408" fill="#57ff9a" font-size="15" text-anchor="middle">Fragmentos reciclables: recógelos (+30 puntos y 5–10 kg cada uno)</text>
+</svg>
+<p class="nota">Una pieza grande = 2 medianas = 4 pequeñas = 4 fragmentos. ¡Romper una sola pieza grande del todo requiere 7 disparos!</p>
+</div></body></html>

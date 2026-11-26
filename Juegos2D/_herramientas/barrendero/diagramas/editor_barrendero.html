@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../comun/diagramas/estilo.css"><style>
+.vs{width:980px;height:470px;background:#1e1e1e;border-radius:10px;overflow:hidden;display:grid;grid-template-columns:48px 230px 1fr;grid-template-rows:32px 1fr 24px;font-family:'DejaVu Sans',Arial;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.top{grid-column:1/4;background:#3c3c3c;color:#ccc;font-size:13px;display:flex;align-items:center;padding-left:12px;gap:16px}
+.act{background:#333;display:flex;flex-direction:column;align-items:center;padding-top:10px;gap:18px}
+.act i{width:24px;height:24px;border:2px solid #858585;border-radius:4px;display:block}.act i.on{border-color:#fff}
+.exp{background:#252526;color:#ccc;font-size:13px;padding:8px 0}
+.exp .t{font-size:11px;letter-spacing:1px;color:#bbb;padding:4px 14px 8px}
+.exp div{padding:3px 14px}.exp .sel{background:#37373d;outline:1px solid #007fd4}
+.ed{background:#1e1e1e;font-family:'DejaVu Sans Mono',monospace;font-size:13.5px;color:#d4d4d4;overflow:hidden}
+.tabs{background:#252526;display:flex;font-family:'DejaVu Sans';font-size:13px}.tabs span{padding:8px 16px;color:#999;background:#2d2d2d}.tabs span.on{background:#1e1e1e;color:#fff;border-top:2px solid #007fd4}
+.code{padding:8px 0;line-height:20px;white-space:pre}.n{color:#858585;display:inline-block;width:42px;text-align:right;margin-right:16px}
+.tg{color:#569cd6}.at{color:#9cdcfe}.st{color:#ce9178}.tx{color:#d4d4d4}
+.bar{grid-column:1/4;background:#007acc;color:#fff;font-size:12px;display:flex;align-items:center;padding-left:12px;gap:20px}
+.globo{position:absolute;background:#fff3cd;border:2px solid #e39c00;border-radius:10px;padding:8px 12px;font-size:14px;color:#5a4300;width:220px;line-height:1.35}
+</style></head><body><div id="captura" style="position:relative">
+<span class="ilus">Ilustración (recreación) de Visual Studio Code</span>
+<h1>Tu carpeta abierta en el editor</h1>
+<p class="sub">En VS Code: menú <b>Archivo → Abrir carpeta…</b> y eliges la carpeta <b>BarrenderoOrbital</b>. A la izquierda verás tus archivos.</p>
+<div class="vs">
+ <div class="top">Archivo &nbsp; Editar &nbsp; Selección &nbsp; Ver &nbsp; Ir &nbsp; Ejecutar &nbsp; Terminal &nbsp; Ayuda</div>
+ <div class="act"><i class="on"></i><i></i><i></i><i></i></div>
+ <div class="exp"><div class="t">EXPLORADOR</div><div>⌄ <b>BARRENDEROORBITAL</b></div><div class="sel">&nbsp;&nbsp;&nbsp;&lt;/&gt; index.html</div><div>&nbsp;&nbsp;&nbsp;JS juego.js</div></div>
+ <div class="ed"><div class="tabs"><span class="on">index.html</span><span>juego.js</span></div><div class="code"><span class="n">1</span><span class="tg">&lt;!DOCTYPE html&gt;</span>
+<span class="n">2</span><span class="tg">&lt;html</span> <span class="at">lang</span>=<span class="st">"es"</span><span class="tg">&gt;</span>
+<span class="n">3</span><span class="tg">&lt;head&gt;</span>
+<span class="n">4</span>  <span class="tg">&lt;meta</span> <span class="at">charset</span>=<span class="st">"UTF-8"</span><span class="tg">&gt;</span>
+<span class="n">5</span>  <span class="tg">&lt;meta</span> <span class="at">name</span>=<span class="st">"viewport"</span> <span class="at">content</span>=<span class="st">"width=device-width, initial-scale=1.0"</span><span class="tg">&gt;</span>
+<span class="n">6</span>  <span class="tg">&lt;title&gt;</span><span class="tx">Barrendero Orbital - Limpia la chatarra espacial</span><span class="tg">&lt;/title&gt;</span>
+<span class="n">7</span>  <span class="tg">&lt;style&gt;</span>
+<span class="n">8</span>    <span class="st">body</span> {
+<span class="n">9</span>      <span class="at">margin</span>: 0;
+<span class="n">10</span>     <span class="at">min-height</span>: 100vh;
+<span class="n">11</span>     <span class="at">display</span>: flex;</div></div>
+ <div class="bar">Ln 1, Col 1 &nbsp;&nbsp; Espacios: 2 &nbsp;&nbsp; UTF-8 &nbsp;&nbsp; HTML</div>
+</div>
+<div class="globo" style="left:80px;top:300px">① Aquí están tus dos archivos. Haz clic en uno para abrirlo.</div>
+<div class="globo" style="left:700px;top:150px">② Aquí escribes el código. Guarda con <b>Ctrl + S</b> (Mac: <b>⌘ + S</b>).</div>
+</div></body></html>
